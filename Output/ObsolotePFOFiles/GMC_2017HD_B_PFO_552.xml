@@ -1,0 +1,29 @@
+<PfoCwPrg Version="3.0">
+  <Number>552</Number><Name>GMC17B WD I5 L178</Name>
+  <NoOfPoints>0</NoOfPoints>
+  <Transformation>
+    <ScaleX>1</ScaleX>
+    <ScaleY>1</ScaleY>
+    <TransX>0</TransX>
+    <TransY>0</TransY>
+    <Rotation>0</Rotation>
+  </Transformation>
+  <Optic unit="mm">450</Optic>
+  <Jumpspeed>4500</Jumpspeed>
+  <PFODelay>2</PFODelay>
+  <V_Offset>0</V_Offset>
+  <D3_active>0</D3_active>
+  <shadowwelding>0</shadowwelding>
+  <ProgType>VectorPower</ProgType>
+  <Date>
+    <year>2016</year>
+    <month>9</month>
+    <day>22</day>
+    <hour>9</hour>
+    <min>27</min>
+    <sec>3</sec>
+  </Date>
+  <g>
+    <circle PEnd="100" PEndVector="20" PStart="20" PWEnd="0" PWEndVector="0" PWStart="0" Ramp1Active="1" Ramp2Active="1" RampLen1="19" RampLen2="19" Z="0" count="0" cx="14.997" cy="148.866" cz="0" deFocus="0" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" dir="1" firstpoint="0" majx="2.997" majy="0" majz="0" minx="0" miny="2.997" minz="0" phi1="332.3" phi2="38" phiOverlap="0" ptDistance="Infinity" r="2.997" reruns="1" v="120" viewascount="1" />
+  </g>
+</PfoCwPrg>

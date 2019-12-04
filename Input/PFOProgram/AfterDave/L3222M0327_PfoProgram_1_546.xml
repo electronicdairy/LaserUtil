@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<PfoCwPrg Version="3.0">
+  <Number>546</Number><Name>GMC17B WD C1 L188</Name>
+  <NoOfPoints>0</NoOfPoints>
+  <Transformation>
+    <ScaleX>1</ScaleX>
+    <ScaleY>1</ScaleY>
+    <TransX>0</TransX>
+    <TransY>0</TransY>
+    <Rotation>0</Rotation>
+  </Transformation>
+  <Optic unit="mm">450</Optic>
+  <Jumpspeed>4500</Jumpspeed>
+  <PFODelay>2</PFODelay>
+  <V_Offset>0</V_Offset>
+  <D3_active>0</D3_active>
+  <shadowwelding>0</shadowwelding>
+  <ProgType>VectorPower</ProgType>
+  <Date>
+    <year>2016</year>
+    <month>10</month>
+    <day>24</day>
+    <hour>0</hour>
+    <min>56</min>
+    <sec>53</sec>
+  </Date>
+  <g>
+    <line x1="47.913" y1="48.233" z1="0" x2="47.913" y2="32.823" z2="0" count="2" viewascount="1" ptDistance="15.41" firstpoint="0" Z="0" v="120" deFocusStart="0" deFocus="0" deFocusEnd="0" deFocusStartRampLen="0" deFocusEndRampLen="0" deFocusStartRampAct="0" deFocusEndRampAct="0" PStart="20" PEnd="100" PEndVector="100" PWStart="0" PWEnd="0" PWEndVector="0" RampLen1="1" Ramp1Active="1" RampLen2="0" Ramp2Active="0" reruns="1"></line>
+    <circle cx="44.911" cy="32.832" cz="0" majx="3.003" majy="0" majz="0" minx="0" miny="3.003" minz="0" r="3.003" phi1="359.83" phi2="306.66" phiOverlap="0" dir="1" count="0" viewascount="1" ptDistance="Infinity" firstpoint="0" Z="0" v="120" deFocusStart="0" deFocus="0" deFocusEnd="0" deFocusStartRampLen="0" deFocusEndRampLen="0" deFocusStartRampAct="0" deFocusEndRampAct="0" PStart="100" PEnd="100" PEndVector="0" PWStart="0" PWEnd="0" PWEndVector="0" RampLen1="0" Ramp1Active="0" RampLen2="0" Ramp2Active="0" reruns="1" />
+    <line x1="46.703" y1="30.423" z1="0" x2="29.153" y2="17.453" z2="0" count="2" viewascount="1" ptDistance="21.82" firstpoint="0" Z="0" v="120" deFocusStart="0" deFocus="0" deFocusEnd="0" deFocusStartRampLen="0" deFocusEndRampLen="0" deFocusStartRampAct="0" deFocusEndRampAct="0" PStart="100" PEnd="100" PEndVector="100" PWStart="0" PWEnd="0" PWEndVector="0" RampLen1="0" Ramp1Active="0" RampLen2="0" Ramp2Active="0" reruns="1"></line>
+    <circle cx="21.061" cy="28.868" cz="0" majx="13.992" majy="0" majz="0" minx="0" miny="13.992" minz="0" r="13.992" phi1="305.34" phi2="218.52" phiOverlap="0" dir="1" count="0" viewascount="1" ptDistance="Infinity" firstpoint="0" Z="0" v="120" deFocusStart="0" deFocus="0" deFocusEnd="0" deFocusStartRampLen="0" deFocusEndRampLen="0" deFocusStartRampAct="0" deFocusEndRampAct="0" PStart="100" PEnd="100" PEndVector="0" PWStart="0" PWEnd="0" PWEndVector="0" RampLen1="0" Ramp1Active="0" RampLen2="0" Ramp2Active="0" reruns="1" />
+    <line x1="10.113" y1="20.153" z1="0" x2="9.443" y2="20.983" z2="0" count="2" viewascount="1" ptDistance="1.07" firstpoint="0" Z="0" v="120" deFocusStart="0" deFocus="0" deFocusEnd="0" deFocusStartRampLen="0" deFocusEndRampLen="0" deFocusStartRampAct="0" deFocusEndRampAct="0" PStart="100" PEnd="100" PEndVector="20" PWStart="0" PWEnd="0" PWEndVector="0" RampLen1="0" Ramp1Active="0" RampLen2="1" Ramp2Active="1" reruns="1"></line>
+  </g>
+</PfoCwPrg>

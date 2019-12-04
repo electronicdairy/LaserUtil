@@ -1,0 +1,31 @@
+<PfoCwPrg Version="3.0">
+  <Number>538</Number><Name>M6WDGMC17</Name>
+  <NoOfPoints>0</NoOfPoints>
+  <Transformation>
+    <ScaleX>1</ScaleX>
+    <ScaleY>1</ScaleY>
+    <TransX>0</TransX>
+    <TransY>0</TransY>
+    <Rotation>0</Rotation>
+  </Transformation>
+  <Optic unit="mm">450</Optic>
+  <Jumpspeed>4500</Jumpspeed>
+  <PFODelay>2</PFODelay>
+  <V_Offset>0</V_Offset>
+  <D3_active>0</D3_active>
+  <shadowwelding>0</shadowwelding>
+  <ProgType>VectorPower</ProgType>
+  <Date>
+    <year>2016</year>
+    <month>10</month>
+    <day>24</day>
+    <hour>14</hour>
+    <min>33</min>
+    <sec>54</sec>
+  </Date>
+  <g>
+    <circle PEnd="100" PEndVector="0" PStart="20" PWEnd="0" PWEndVector="0" PWStart="0" Ramp1Active="1" Ramp2Active="0" RampLen1="16" RampLen2="0" Z="0" count="0" cx="2.434" cy="10.673" cz="0" deFocus="0" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" dir="1" firstpoint="0" majx="3.604" majy="0" majz="0" minx="0" miny="3.604" minz="0" phi1="98.3" phi2="323.3" phiOverlap="0" ptDistance="Infinity" r="3.604" reruns="1" v="100" viewascount="1" />
+    <circle PEnd="100" PEndVector="0" PStart="100" PWEnd="0" PWEndVector="0" PWStart="0" Ramp1Active="0" Ramp2Active="0" RampLen1="0" RampLen2="0" Z="0" count="0" cx="8.587" cy="1.252" cz="0" deFocus="0" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" dir="0" firstpoint="0" majx="7.966" majy="0" majz="0" minx="0" miny="7.966" minz="0" phi1="114.18" phi2="239.92" phiOverlap="0" ptDistance="Infinity" r="7.966" reruns="1" v="100" viewascount="1" />
+    <circle PEnd="100" PEndVector="20" PStart="100" PWEnd="0" PWEndVector="0" PWStart="0" Ramp1Active="0" Ramp2Active="1" RampLen1="0" RampLen2="16" Z="0" count="0" cx="2.602" cy="-8.562" cz="0" deFocus="0" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" dir="1" firstpoint="0" majx="3.536" majy="0" majz="0" minx="0" miny="3.536" minz="0" phi1="55.7" phi2="278.2" phiOverlap="0" ptDistance="Infinity" r="3.536" reruns="1" v="100" viewascount="1" />
+  </g>
+</PfoCwPrg>

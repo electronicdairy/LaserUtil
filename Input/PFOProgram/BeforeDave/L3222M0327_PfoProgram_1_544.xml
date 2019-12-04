@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<PfoCwPrg Version="3.0">
+  <Number>544</Number><Name>L2WDGMC17</Name>
+  <NoOfPoints>0</NoOfPoints>
+  <Transformation>
+    <ScaleX>1</ScaleX>
+    <ScaleY>1</ScaleY>
+    <TransX>0</TransX>
+    <TransY>0</TransY>
+    <Rotation>0</Rotation>
+  </Transformation>
+  <Optic unit="mm">450</Optic>
+  <Jumpspeed>4500</Jumpspeed>
+  <PFODelay>2</PFODelay>
+  <V_Offset>0</V_Offset>
+  <D3_active>0</D3_active>
+  <shadowwelding>0</shadowwelding>
+  <ProgType>VectorPower</ProgType>
+  <Date>
+    <year>2016</year>
+    <month>10</month>
+    <day>24</day>
+    <hour>14</hour>
+    <min>35</min>
+    <sec>53</sec>
+  </Date>
+  <g>
+    <circle cx="0.211" cy="8.182" cz="0" majx="3.601" majy="0" majz="0" minx="0" miny="3.601" minz="0" r="3.601" phi1="98.7" phi2="297.8" phiOverlap="0" dir="1" count="0" viewascount="1" ptDistance="Infinity" firstpoint="0" Z="0" v="120" deFocusStart="0" deFocus="0" deFocusEnd="0" deFocusStartRampLen="0" deFocusEndRampLen="0" deFocusStartRampAct="0" deFocusEndRampAct="0" PStart="20" PEnd="100" PEndVector="0" PWStart="0" PWEnd="0" PWEndVector="0" RampLen1="16" Ramp1Active="1" RampLen2="0" Ramp2Active="0" reruns="1" />
+    <circle cx="6.096" cy="-1.382" cz="0" majx="7.64" majy="0" majz="0" minx="0" miny="7.64" minz="0" r="7.64" phi1="123.4" phi2="241.72" phiOverlap="0" dir="0" count="0" viewascount="1" ptDistance="Infinity" firstpoint="0" Z="0" v="120" deFocusStart="0" deFocus="0" deFocusEnd="0" deFocusStartRampLen="0" deFocusEndRampLen="0" deFocusStartRampAct="0" deFocusEndRampAct="0" PStart="100" PEnd="100" PEndVector="0" PWStart="0" PWEnd="0" PWEndVector="0" RampLen1="0" Ramp1Active="0" RampLen2="0" Ramp2Active="0" reruns="1" />
+    <circle cx="0.679" cy="-11.078" cz="0" majx="3.469" majy="0" majz="0" minx="0" miny="3.469" minz="0" r="3.469" phi1="58.8" phi2="275.8" phiOverlap="0" dir="1" count="0" viewascount="1" ptDistance="Infinity" firstpoint="0" Z="0" v="120" deFocusStart="0" deFocus="0" deFocusEnd="0" deFocusStartRampLen="0" deFocusEndRampLen="0" deFocusStartRampAct="0" deFocusEndRampAct="0" PStart="100" PEnd="100" PEndVector="20" PWStart="0" PWEnd="0" PWEndVector="0" RampLen1="0" Ramp1Active="0" RampLen2="16" Ramp2Active="1" reruns="1" />
+  </g>
+</PfoCwPrg>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<PfoCwPrg Version="3.0">
+  <Number>536</Number><Name>E1WDGMC17</Name>
+  <NoOfPoints>0</NoOfPoints>
+  <Transformation>
+    <ScaleX>1</ScaleX>
+    <ScaleY>1</ScaleY>
+    <TransX>0</TransX>
+    <TransY>0</TransY>
+    <Rotation>0</Rotation>
+  </Transformation>
+  <Optic unit="mm">450</Optic>
+  <Jumpspeed>4500</Jumpspeed>
+  <PFODelay>2</PFODelay>
+  <V_Offset>0</V_Offset>
+  <D3_active>0</D3_active>
+  <shadowwelding>0</shadowwelding>
+  <ProgType>VectorPower</ProgType>
+  <Date>
+    <year>2014</year>
+    <month>10</month>
+    <day>7</day>
+    <hour>8</hour>
+    <min>45</min>
+    <sec>44</sec>
+  </Date>
+  <g>
+    <circle cx="-44.146" cy="47.347" cz="0" majx="14.118" majy="0" majz="0" minx="0" miny="14.118" minz="0" r="14.118" phi1="325.3" phi2="235" phiOverlap="0" dir="1" count="0" viewascount="1" ptDistance="Infinity" firstpoint="0" Z="0" v="120" deFocusStart="0" deFocus="0" deFocusEnd="0" deFocusStartRampLen="0" deFocusEndRampLen="0" deFocusStartRampAct="0" deFocusEndRampAct="0" PStart="20" PEnd="100" PEndVector="0" PWStart="0" PWEnd="0" PWEndVector="0" RampLen1="4" Ramp1Active="1" RampLen2="0" Ramp2Active="0" reruns="1" />
+    <line x1="-52.24" y1="35.78" z1="0" x2="-69.79" y2="48.76" z2="0" count="2" viewascount="1" ptDistance="21.83" firstpoint="0" Z="0" v="120" deFocusStart="0" deFocus="0" deFocusEnd="0" deFocusStartRampLen="0" deFocusEndRampLen="0" deFocusStartRampAct="0" deFocusEndRampAct="0" PStart="100" PEnd="100" PEndVector="100" PWStart="0" PWEnd="0" PWEndVector="0" RampLen1="0" Ramp1Active="0" RampLen2="0" Ramp2Active="0" reruns="1"></line>
+    <circle cx="-68.072" cy="51.143" cz="0" majx="2.938" majy="0" majz="0" minx="0" miny="2.938" minz="0" r="2.938" phi1="234.21" phi2="179.87" phiOverlap="0" dir="1" count="0" viewascount="1" ptDistance="Infinity" firstpoint="0" Z="0" v="120" deFocusStart="0" deFocus="0" deFocusEnd="0" deFocusStartRampLen="0" deFocusEndRampLen="0" deFocusStartRampAct="0" deFocusEndRampAct="0" PStart="100" PEnd="100" PEndVector="0" PWStart="0" PWEnd="0" PWEndVector="0" RampLen1="0" Ramp1Active="0" RampLen2="0" Ramp2Active="0" reruns="1" />
+    <line x1="-71.01" y1="51.15" z1="0" x2="-71.01" y2="66.56" z2="0" count="2" viewascount="1" ptDistance="15.41" firstpoint="0" Z="0" v="120" deFocusStart="0" deFocus="0" deFocusEnd="0" deFocusStartRampLen="0" deFocusEndRampLen="0" deFocusStartRampAct="0" deFocusEndRampAct="0" PStart="100" PEnd="100" PEndVector="20" PWStart="0" PWEnd="0" PWEndVector="0" RampLen1="0" Ramp1Active="0" RampLen2="1" Ramp2Active="1" reruns="1"></line>
+  </g>
+</PfoCwPrg>

@@ -1,0 +1,36 @@
+<PfoCwPrg Version="3.0">
+  <Number>476</Number><Name>L2SPGMC17</Name>
+  <Date>
+    <year>2014</year>
+    <month>10</month>
+    <day>2</day>
+    <hour>15</hour>
+    <minute>7</minute>
+  </Date>
+  <Transformation>
+    <ScaleX>1.000</ScaleX>
+    <ScaleY>1.000</ScaleY>
+    <TransX unit="mm">0.000</TransX>
+    <TransY unit="mm">0.000</TransY>
+    <Rotation unit="deg">0</Rotation>
+  </Transformation>
+  <Optic unit="mm">450</Optic>
+  <Jumpspeed>4500.000</Jumpspeed>
+  <PFODelay>2.000</PFODelay>
+  <V_Offset>0.000</V_Offset>
+  <D3_active>0</D3_active>
+  <shadowwelding>0</shadowwelding>
+  <g>
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="13.453" y1="21.755" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="15.186" y1="12.715" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="15.307" y1="4.981" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="12.500" y1="-4.523" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="7.598" y1="-5.476" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="8.541" y1="-1.060" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="7.462" y1="2.897" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="9.870" y1="7.761" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="7.530" y1="13.926" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="8.782" y1="17.910" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="7.530" y1="21.823" z1="0.000" />
+  </g>
+</PfoCwPrg>

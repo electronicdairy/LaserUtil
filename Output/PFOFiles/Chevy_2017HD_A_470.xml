@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<PfoCwPrg Version="3.0">
+  <Number>470</Number><Name>B2SPGMC17</Name>
+  <Date>
+    <year>2015</year>
+    <month>6</month>
+    <day>5</day>
+    <hour>11</hour>
+    <minute>59</minute>
+  </Date>
+  <Transformation>
+    <ScaleX>1.000</ScaleX>
+    <ScaleY>1.000</ScaleY>
+    <TransX unit="mm">0.000</TransX>
+    <TransY unit="mm">0.000</TransY>
+    <Rotation unit="deg">0</Rotation>
+  </Transformation>
+  <Optic unit="mm">450</Optic>
+  <Jumpspeed>4500.000</Jumpspeed>
+  <PFODelay>2.000</PFODelay>
+  <V_Offset>0.000</V_Offset>
+  <D3_active>0</D3_active>
+  <shadowwelding>0</shadowwelding>
+  <g>
+    <circle PEnd="100.000" PStart="100.000" Z="0" cx="-1.170" cy="9.491" cz="0.000" deFocus="11.500" dir="0" majx="0.300" majy="0.000" majz="0.000" minx="0.000" miny="0.300" minz="0.000" phi1="0" phi2="360" phiOverlap="0.000" r="0.300" reruns="1" v="400.000" />
+    <circle PEnd="100.000" PStart="100.000" Z="0" cx="-1.675" cy="5.863" cz="0.000" deFocus="11.500" dir="0" majx="0.300" majy="0.000" majz="0.000" minx="0.000" miny="0.300" minz="0.000" phi1="0" phi2="360" phiOverlap="0.000" r="0.300" reruns="1" v="400.000" />
+    <circle PEnd="100.000" PStart="100.000" Z="0" cx="-1.895" cy="1.943" cz="0.000" deFocus="11.500" dir="0" majx="0.300" majy="0.000" majz="0.000" minx="0.000" miny="0.300" minz="0.000" phi1="0" phi2="360" phiOverlap="0.000" r="0.300" reruns="1" v="400.000" />
+    <circle PEnd="100.000" PStart="100.000" Z="0" cx="-1.704" cy="-1.692" cz="0.000" deFocus="11.500" dir="0" majx="0.300" majy="0.000" majz="0.000" minx="0.000" miny="0.300" minz="0.000" phi1="0" phi2="360" phiOverlap="0.000" r="0.300" reruns="1" v="400.000" />
+    <circle PEnd="100.000" PStart="100.000" Z="0" cx="-0.844" cy="-5.634" cz="0.000" deFocus="11.500" dir="0" majx="0.300" majy="0.000" majz="0.000" minx="0.000" miny="0.300" minz="0.000" phi1="0" phi2="360" phiOverlap="0.000" r="0.300" reruns="1" v="400.000" />
+    <circle PEnd="100.000" PStart="100.000" Z="0" cx="1.857" cy="-6.905" cz="0.000" deFocus="11.500" dir="0" majx="0.300" majy="0.000" majz="0.000" minx="0.000" miny="0.300" minz="0.000" phi1="0" phi2="360" phiOverlap="0.000" r="0.300" reruns="1" v="400.000" />
+    <circle PEnd="100.000" PStart="100.000" Z="0" cx="1.479" cy="-3.477" cz="0.000" deFocus="11.500" dir="0" majx="0.300" majy="0.000" majz="0.000" minx="0.000" miny="0.300" minz="0.000" phi1="0" phi2="360" phiOverlap="0.000" r="0.300" reruns="1" v="400.000" />
+    <circle PEnd="100.000" PStart="100.000" Z="0" cx="0.926" cy="0.063" cz="0.000" deFocus="11.500" dir="0" majx="0.300" majy="0.000" majz="0.000" minx="0.000" miny="0.300" minz="0.000" phi1="0" phi2="360" phiOverlap="0.000" r="0.300" reruns="1" v="400.000" />
+    <circle PEnd="100.000" PStart="100.000" Z="0" cx="1.147" cy="3.713" cz="0.000" deFocus="11.500" dir="0" majx="0.300" majy="0.000" majz="0.000" minx="0.000" miny="0.300" minz="0.000" phi1="0" phi2="360" phiOverlap="0.000" r="0.300" reruns="1" v="400.000" />
+    <circle PEnd="100.000" PStart="100.000" Z="0" cx="1.257" cy="7.419" cz="0.000" deFocus="11.500" dir="0" majx="0.300" majy="0.000" majz="0.000" minx="0.000" miny="0.300" minz="0.000" phi1="0" phi2="360" phiOverlap="0.000" r="0.300" reruns="1" v="400.000" />
+    <circle PEnd="100.000" PStart="100.000" Z="0" cx="2.696" cy="9.576" cz="0.000" deFocus="11.500" dir="0" majx="0.300" majy="0.000" majz="0.000" minx="0.000" miny="0.300" minz="0.000" phi1="0" phi2="360" phiOverlap="0.000" r="0.300" reruns="1" v="400.000" />
+    <circle PEnd="100.000" PStart="100.000" Z="0" cx="1.045" cy="11.690" cz="0.000" deFocus="11.500" dir="0" majx="0.300" majy="0.000" majz="0.000" minx="0.000" miny="0.300" minz="0.000" phi1="0" phi2="360" phiOverlap="0.000" r="0.300" reruns="1" v="400.000" />
+  </g>
+</PfoCwPrg>

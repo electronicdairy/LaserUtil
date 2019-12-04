@@ -1,0 +1,50 @@
+<PfoCwPrg Version="3.0">
+  <Number>423</Number><Name>L3L4SPGMC17</Name>
+  <NoOfPoints>0</NoOfPoints>
+  <Transformation>
+    <ScaleX>1</ScaleX>
+    <ScaleY>1</ScaleY>
+    <TransX>0</TransX>
+    <TransY>0</TransY>
+    <Rotation>0</Rotation>
+  </Transformation>
+  <Optic unit="mm">450</Optic>
+  <Jumpspeed>4500</Jumpspeed>
+  <PFODelay>2</PFODelay>
+  <V_Offset>0</V_Offset>
+  <D3_active>0</D3_active>
+  <shadowwelding>0</shadowwelding>
+  <ProgType>VectorPower</ProgType>
+  <Date>
+    <year>2014</year>
+    <month>10</month>
+    <day>9</day>
+    <hour>16</hour>
+    <min>12</min>
+    <sec>36</sec>
+  </Date>
+  <g>
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="-38.467" y1="-16.417" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="-33.128" y1="-16.838" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="-31.653" y1="-10.516" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="-31.513" y1="-0.752" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="-31.372" y1="9.575" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="-33.199" y1="14.211" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="-38.397" y1="13.227" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="-35.587" y1="10.909" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="-35.376" y1="4.376" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="-35.306" y1="-5.528" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="-35.376" y1="-12.834" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="36.239" y1="-12.46" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="35.409" y1="11.743" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="35.281" y1="-5.818" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="37.963" y1="15.192" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="38.091" y1="-15.972" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="31.513" y1="9.189" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="32.407" y1="-14.695" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="35.345" y1="4.016" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="33.11" y1="15.447" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="31.449" y1="-0.837" z1="0" />
+    <point PStart="100" PWStart="0" Z="0" deFocus="30" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" reruns="1" time="7" x1="31.449" y1="-10.863" z1="0" />
+  </g>
+</PfoCwPrg>

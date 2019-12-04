@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<PfoCwPrg Version="3.0">
+  <Number>477</Number><Name>L1SPGMC17</Name>
+  <Date>
+    <year>2014</year>
+    <month>9</month>
+    <day>9</day>
+    <hour>13</hour>
+    <minute>21</minute>
+  </Date>
+  <Transformation>
+    <ScaleX>1.000</ScaleX>
+    <ScaleY>1.000</ScaleY>
+    <TransX unit="mm">0.000</TransX>
+    <TransY unit="mm">0.000</TransY>
+    <Rotation unit="deg">0</Rotation>
+  </Transformation>
+  <Optic unit="mm">450</Optic>
+  <Jumpspeed>4500.000</Jumpspeed>
+  <PFODelay>2.000</PFODelay>
+  <V_Offset>0.000</V_Offset>
+  <D3_active>0</D3_active>
+  <shadowwelding>0</shadowwelding>
+  <g>
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="-72.805" y1="21.838" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="-66.604" y1="20.884" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="-66.468" y1="14.683" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="-71.102" y1="9.914" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="-66.809" y1="3.236" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="-66.195" y1="-3.511" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="-69.943" y1="-6.441" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="-73.691" y1="-4.601" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="-70.148" y1="-2.284" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="-71.919" y1="1.123" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="-75.122" y1="6.302" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="-73.691" y1="13.866" z1="0.000" />
+    <point PStart="100.000" Z="0.000" deFocus="30.000" reruns="1" time="7.000" x1="-70.284" y1="18.363" z1="0.000" />
+  </g>
+</PfoCwPrg>
