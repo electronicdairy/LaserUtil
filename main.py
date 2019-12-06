@@ -8,11 +8,11 @@ from PFOWrite import PFOWrite
 
 
 #   Inputs:
-ProgramName = "VRQ_Chevy2016LD_1B"
-RobotFile = 'Input/RobotProgram/BeforeDave/VRQ_Chevy2016LD_1B.mod'
-LaserFile = "Input/LaserProgram/BeforeDave/L3222M0327_LaserProgram_"
-PFOFile = "Input/PFOProgram/BeforeDave/L3222M0327_PfoProgram_1_"
-GlobalCall = [131]
+ProgramName = "D3_TEST1"
+RobotFile = 'Input/KA Dallas D3 Laser and Robot Backups/VRDD3Ethernet_Backup_20141129/RAPID/TASK1/PROGMOD/GM2698_S.mod'
+LaserFile = "Input/KA Dallas D3 Laser and Robot Backups/L3222M0248/L3222M0248/LaserProgram/L3222M0248_LaserProgram_"
+PFOFile = "Input/KA Dallas D3 Laser and Robot Backups/L3222M0248/L3222M0248/PfoProgram_1/L3222M0248_PfoProgram_1_"
+GlobalCall = [140]
 
 
 #   Functions
@@ -109,6 +109,6 @@ def CreateOutputIndex(RobotFile, LaserFile, PFOFile):
     GenIndex(RobotList, LaserDict, PFODict)
 
 
-#   CreateOutputIndex(RobotFile, LaserFile, PFOFile)
-x = GenRobotList(RobotFile)
-print(x)
+CreateOutputIndex(RobotFile, LaserFile, PFOFile)
+# x = GenRobotList(RobotFile)
+# print(x)
