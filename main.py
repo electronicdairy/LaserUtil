@@ -2,6 +2,8 @@ from RobotParse import RobotParse
 from PFOParse import PFOParse
 from LaserParse import LaserParse
 from Procedural.replaceMULT import replaceMULT
+from PFOWrite import PFOWrite
+
 
 
 
@@ -11,6 +13,7 @@ RobotFile = 'Input/RobotProgram/BeforeDave/VRQ_Chevy2016LD_1B.mod'
 LaserFile = "Input/LaserProgram/BeforeDave/L3222M0327_LaserProgram_"
 PFOFile = "Input/PFOProgram/BeforeDave/L3222M0327_PfoProgram_1_"
 GlobalCall = [131]
+
 
 #   Functions
 #   Generate robot list of Laser/PFO numbers from robot file
@@ -106,4 +109,6 @@ def CreateOutputIndex(RobotFile, LaserFile, PFOFile):
     GenIndex(RobotList, LaserDict, PFODict)
 
 
-CreateOutputIndex(RobotFile, LaserFile, PFOFile)
+#   CreateOutputIndex(RobotFile, LaserFile, PFOFile)
+x = GenRobotList(RobotFile)
+print(x)

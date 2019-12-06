@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Motor>
+  <Motor_Calib JointID="1" Cal_Offset="4.20704" AbsAcc="false" />
+  <Motor_Calib JointID="2" Cal_Offset="3.81885" AbsAcc="false" />
+  <Motor_Calib JointID="3" Cal_Offset="4.53502" AbsAcc="false" />
+  <Motor_Calib JointID="4" Cal_Offset="2.04125" AbsAcc="false" />
+  <Motor_Calib JointID="5" Cal_Offset="4.03447" AbsAcc="false" />
+  <Motor_Calib JointID="6" Cal_Offset="1.95832" AbsAcc="false" />
+  <Motor_Calib JointID="7" Cal_Offset="0" AbsAcc="false" />
+</Motor>

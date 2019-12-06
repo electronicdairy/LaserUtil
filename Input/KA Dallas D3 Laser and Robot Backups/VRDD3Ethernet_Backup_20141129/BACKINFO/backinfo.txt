@@ -1,0 +1,65 @@
+#
+# Generated backup file, do not edit.
+#
+# Originally at: /hd0a/temp/USB_BACKUP
+# 14-11-29  18:09:04
+#
+>>SYSTEM_ID:
+46-80448
+
+>>PRODUCTS_ID:
+RobotWare Version: 5.15.4001.04
+3HEA-046-80448 Version: 1.00.0000.00
+
+  RW Control module key
+  RobotWare OS and English
+  644-1 French
+  645-3 Spanish
+  709-x DeviceNet
+  709-2/709-5 Master/Slave Dual
+  840-1 EtherNet/IP Fieldbus Adapter
+  608-1 World Zones
+  611-1 Path Recovery
+  623-1 Multitasking
+  RW Drive module 1 key
+  ABB standard manipulator
+  IRB 4600
+  4600-60/2.05 Type B
+  No motor fan
+  810-1 Electronic Position Switches
+  Drive System 09 4600/66x0/460/660/760
+  Additional drive
+  ADU-790A in position X3
+  No drive in position Y3
+  3HEA-046-80448.00
+
+>>ROBOT_TYPE:
+4600-60/2.05 Type B
+
+>>HOME:
+All public files and directories
+
+>>SYSPAR:
+SYS.cfg
+PROC.cfg
+EIO.cfg
+SIO.cfg
+MOC.cfg
+MMC.cfg
+
+
+>>TASK1: (T_ROB1,,)
+SYSMOD/user.sys @ user.sys
+PROGMOD/GM2698_B.mod @ gm2698_b.mod
+PROGMOD/GM2694_96_B.mod @ gm2694_96_b.mod
+PROGMOD/MainModule.mod @ mainmodule.mod
+PROGMOD/GM2698_A.mod @ gm2698_a.mod
+PROGMOD/GM2694_96_A.mod @ gm2694_96_a.mod
+PROGMOD/GM2698_S.mod @ gm2698_s.mod
+PROGMOD/GM2694_96_S.mod @ gm2694_96_s.mod
+
+>>TASK2: (PSC_CBC,,)
+SYSMOD/user.sys @ user.sys
+
+
+>>EOF:

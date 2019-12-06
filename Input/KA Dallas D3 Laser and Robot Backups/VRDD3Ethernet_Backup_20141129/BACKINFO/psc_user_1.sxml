@@ -1,0 +1,52 @@
+<Seal CheckSum="69 93 210 224 209 211 107 119 206 177 141 251 249 188 187 236" CheckSumReadBack="197 110 107 20 54 198 109 151 94 111 250 150 213 45 47 159">
+  <SafetyControllerUserData PSC_Type="Basic" PSC_HWVersion="1.0.0" PSC_ConfigVersion="1.1.0" Date="2014-10-19  09:57:10" ControllerID="" UserID="Safety" Pin="477652">
+    <Mechanical_Unit>
+      <Robot Name="ROB_1" NoOfAxis="6">
+        <Robot_Serial_Number Robot_Serial_Number_High_Part="46" Robot_Serial_Number_Low_Part="80448" />
+      </Robot>
+    </Mechanical_Unit>
+    <Monitoring>
+      <JointRange_Monitor>
+        <MValueSet ValueSetID="1" Output_ID="1" AllowInside="true">
+          <MJointRange JointID="1" LowerLimit="-44" UpperLimit="5" AllowInside="true" />
+          <MJointRange JointID="2" LowerLimit="-43" UpperLimit="-37" AllowInside="true" />
+          <MJointRange JointID="3" LowerLimit="39" UpperLimit="45" AllowInside="true" />
+          <MJointRange JointID="4" LowerLimit="-5" UpperLimit="5" AllowInside="true" />
+          <MJointRange JointID="5" LowerLimit="-4" UpperLimit="-1" AllowInside="true" />
+          <MJointRange JointID="6" LowerLimit="-5" UpperLimit="5" AllowInside="true" />
+        </MValueSet>
+        <MValueSet ValueSetID="2" Output_ID="2" AllowInside="true">
+          <MJointRange JointID="1" LowerLimit="-145" UpperLimit="-40" AllowInside="true" />
+        </MValueSet>
+        <MValueSet ValueSetID="3" Output_ID="3" AllowInside="true">
+          <MJointRange JointID="1" LowerLimit="-5" UpperLimit="45" AllowInside="true" />
+          <MJointRange JointID="2" LowerLimit="-43" UpperLimit="-37" AllowInside="true" />
+          <MJointRange JointID="3" LowerLimit="39" UpperLimit="45" AllowInside="true" />
+          <MJointRange JointID="4" LowerLimit="-5" UpperLimit="5" AllowInside="true" />
+          <MJointRange JointID="5" LowerLimit="-4" UpperLimit="-1" AllowInside="true" />
+          <MJointRange JointID="6" LowerLimit="-5" UpperLimit="5" AllowInside="true" />
+        </MValueSet>
+        <MValueSet ValueSetID="4" Output_ID="4" AllowInside="true">
+          <MJointRange JointID="1" LowerLimit="40" UpperLimit="145" AllowInside="true" />
+        </MValueSet>
+        <MValueSet ValueSetID="5" Output_ID="5" AllowInside="true">
+          <MJointRange JointID="1" LowerLimit="-26" UpperLimit="21" AllowInside="true" />
+          <MJointRange JointID="2" LowerLimit="-53" UpperLimit="44" AllowInside="true" />
+          <MJointRange JointID="3" LowerLimit="-34" UpperLimit="62" AllowInside="true" />
+          <MJointRange JointID="4" LowerLimit="-82" UpperLimit="75" AllowInside="true" />
+          <MJointRange JointID="5" LowerLimit="-90" UpperLimit="63" AllowInside="true" />
+          <MJointRange JointID="6" LowerLimit="-63" UpperLimit="83" AllowInside="true" />
+        </MValueSet>
+      </JointRange_Monitor>
+    </Monitoring>
+    <OSR_Definition />
+    <SyncCheck Cycle="199" WarningOnly="false" PreWarning="3" DualChannel="false">
+      <SyncPosition JointID="1" JointValue="-1.8" />
+      <SyncPosition JointID="2" JointValue="-21.6" />
+      <SyncPosition JointID="3" JointValue="-1.5" />
+      <SyncPosition JointID="4" JointValue="4.5" />
+      <SyncPosition JointID="5" JointValue="23.1" />
+      <SyncPosition JointID="6" JointValue="-4.2" />
+    </SyncCheck>
+  </SafetyControllerUserData>
+</Seal>
