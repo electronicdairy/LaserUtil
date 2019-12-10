@@ -7,11 +7,15 @@ from PFOWrite import PFOWrite
 
 
 
+
+
 #   Inputs:
 ProgramName = "D3_TEST1"
-RobotFile = 'Input/KA Dallas D3 Laser and Robot Backups/VRDD3Ethernet_Backup_20141129/RAPID/TASK1/PROGMOD/GM2698_S.mod'
+RobotFile = 'Input/KA Dallas D3 Laser and Robot Backups/VRDD3Ethernet_Backup_20141129/RAPID/TASK1/PROGMOD/GM2698_A.mod'
 LaserFile = "Input/KA Dallas D3 Laser and Robot Backups/L3222M0248/L3222M0248/LaserProgram/L3222M0248_LaserProgram_"
 PFOFile = "Input/KA Dallas D3 Laser and Robot Backups/L3222M0248/L3222M0248/PfoProgram_1/L3222M0248_PfoProgram_1_"
+PFOOut = "Output/PFOFiles/Test1_"
+Index = "Input/Index/D3_TEST1.csv"
 GlobalCall = [140]
 
 
@@ -81,16 +85,16 @@ def GenIndex(RobotList, LaserDict, PFODict):
         PFO = RobotList[i][2]
 
         if RobotList[i][1] in GlobalCall:
-            L1.append([Position, Laser, "Global Call", PFO, PFODict[PFO].name])
+            L1.append([Position, Laser, "Global Call", 0, PFO, PFODict[PFO].name])
 
         else:
             LaserName = LaserDict[Laser].name
             LaserPFO = LaserDict[Laser].pfo
             for j in range(len(LaserPFO)):
-                L1.append([Position, Laser, LaserName, LaserPFO[j], PFODict[LaserPFO[j]].name])
+                L1.append([Position, Laser, LaserName, j+1, LaserPFO[j], PFODict[LaserPFO[j]].name])
 
     with open("Output/OriginalIndex/" + str(ProgramName) + ".csv", "w") as OutputFile:
-        OutputFile.write("Position,Laser,Laser Name,PFO,PFO Name,New Laser,New PFO" + "\n")
+        OutputFile.write("Position,Laser,Laser Name,Row,PFO,PFO Name,New Laser,New PFO" + "\n")
         for i in range(len(L1)):
             string = replaceMULT(str(L1[i]), "[]'", "") + "\n"
             OutputFile.write(string)
@@ -108,7 +112,11 @@ def CreateOutputIndex(RobotFile, LaserFile, PFOFile):
 
     GenIndex(RobotList, LaserDict, PFODict)
 
-
 CreateOutputIndex(RobotFile, LaserFile, PFOFile)
-# x = GenRobotList(RobotFile)
-# print(x)
+
+RobotList = GenRobotList(RobotFile)
+LaserDict = GenLaserDict(RobotList, LaserFile)
+RobotPFO = GenRobotPFO(RobotList)
+PFODict = GenPFODict(RobotPFO, LaserDict, PFOFile)
+
+#   PFOWrite(PFOFile, PFOOut, Index, PFODict)

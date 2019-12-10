@@ -22,6 +22,7 @@ def PFOParse(pfolist, pfodir):
         tree = ET.ElementTree(file= str(pfodir) + str(pfolist[i]) + ".xml")
         Name = tree.find("Name")
         Name = replaceMULT(Name.text, ",", "-")
+        Name = Name.lstrip()
         Num = tree.find("Number")
         y = pfolist[i]
         PFOdict[y] = ClassPFO(Name, Num.text)

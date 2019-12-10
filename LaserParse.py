@@ -17,13 +17,13 @@ def LaserParse(RobotLaserList, LaserFile):
         rotationlist = []
         tree = ET.ElementTree(file =str(LaserFile) + str(RobotLaserList[i]) + ".xml")
         LaserName = tree.find("ProgName")
-        LaserName = replaceMULT(LaserName.text, ",", "-")
+        LaserName = replaceMULT(LaserName.text, ", ", "-")
         LaserNum = tree.find("ProgNr")
         for y in tree.findall("./LaserProgParams/LaserProgParam[ParamName = 'PFOProgNo']/ParamValue"):
-            target = int(replaceMULT(y.text, "'", ""))
+            target = int(replaceMULT(y.text, "' ", ""))
             pfolist.append(target)
         for y in tree.findall("./LaserProgParams/LaserProgParam[ParamName = 'PFORotation']/ParamValue"):
-            target = int(replaceMULT(y.text, "'", ""))
+            target = int(replaceMULT(y.text, "' ", ""))
             rotationlist.append(target)
 
         z = RobotLaserList[i]
