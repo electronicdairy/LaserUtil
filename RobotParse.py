@@ -1,8 +1,9 @@
 from Procedural.replaceMULT import replaceMULT
 
-def RobotParse(RobotDir):
+
+def RobotParse(RobotFile):
     parsedList = []
-    with open(str(RobotDir), 'r') as robotProgram:
+    with open(str(RobotFile), 'r') as robotProgram:
         lines = robotProgram.readlines()
         j = 1
         for i in range(len(lines)):
@@ -31,22 +32,12 @@ def RobotParse(RobotDir):
                     parsedList.append([j, numL, 0])
                     j += 1
 
-
-    # with open('./Output/RobotProgram/BeforeDave/GMC_2017HD_B.mod.csv', 'w+') as opr:
-    #     for i in range((len(L1))):
-    #         ol = str(i) + ", " + str(L1[i][0]) + ", " + str(L1[i][1]) + '\n'
-    #         opr.write(ol)
-    #         print('exported line')
-
     return parsedList
 
-# dir1 = 'Input/RobotProgram/BeforeDave/GMC_2017HD_B.mod'
-# x = RobotParse(dir1)
-#
-# print(x)
 
 def main():
     RobotParse(RobotDir)
+
 
 if __name__ == "__main__":
     main()

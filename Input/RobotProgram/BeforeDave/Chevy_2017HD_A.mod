@@ -218,7 +218,7 @@ MODULE Chevy_2017HD_A
             MoveJ p3A_Sub01_02_P000,vProduction,fine,t3D_PFO\WObj:=wobj_3A;
             rPFO_Dimpling;
             !
-            rSetLaser_PFO_Prog_Num 27,0;
+			rSetLaser_PFO_Prog_Num 27,0;
             MoveJ p3A_Sub01_04_N060,vProduction,fine,t3D_PFO\WObj:=wobj_3A;
             rPFO_Dimpling;
             ENDIF
