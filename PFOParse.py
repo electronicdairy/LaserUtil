@@ -37,7 +37,7 @@ def PFOParse(pfolist, pfodir):
 # print(x[127].number)
 
 def main():
-    PFOParse(pfolist)
+    PFOParse(pfolist, pfodir)
 
 
 if __name__ == "__main__":

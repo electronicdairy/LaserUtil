@@ -113,5 +113,19 @@ def CreateOutputIndex(RobotFile, LaserFile, PFOFile):
     GenIndex(RobotList, LaserDict, PFODict)
 
 
-CreateOutputIndex(RobotFile, LaserFile, PFOFile)
+#   Updates PFO file with new numbers
+def WritePFO(inputdir, outputdir, indexdir, pfodict):
+    result = PFOWrite(inputdir, outputdir, indexdir, pfodict)
+    return result
+
+
+#   Updates Laser files with new Laser Numbers and PFO numbers
+def WriteLaser(LaserFile, LaserOut, Index, LaserDict, GlobalCall):
+    result = LaserWrite(LaserFile, LaserOut, Index, LaserDict, GlobalCall)
+    return result
+
+
+
+
+
 

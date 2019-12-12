@@ -43,3 +43,10 @@ def LaserWrite(LaserFile, LaserOut, Index, LaserDict, GlobalCall):
 
     return LaserDict
 
+
+def main():
+    LaserWrite(LaserFile, LaserOut, Index, LaserDict, GlobalCall)
+
+
+if __name__ == "__main__":
+    main()
