@@ -121,7 +121,7 @@
       <ProgRowNr>1</ProgRowNr>
       <ParamName>PFOProgNo</ParamName>
       <ParamType>Fixed</ParamType>
-      <ParamValue>994</ParamValue>
+      <ParamValue>89</ParamValue>
     </LaserProgParam>
     <LaserProgParam>
       <ProgRowNr>1</ProgRowNr>
@@ -265,7 +265,7 @@
       <ProgRowNr>2</ProgRowNr>
       <ParamName>PFOProgNo</ParamName>
       <ParamType>Fixed</ParamType>
-      <ParamValue>993</ParamValue>
+      <ParamValue>90</ParamValue>
     </LaserProgParam>
     <LaserProgParam>
       <ProgRowNr>2</ProgRowNr>
@@ -409,7 +409,7 @@
       <ProgRowNr>3</ProgRowNr>
       <ParamName>PFOProgNo</ParamName>
       <ParamType>Fixed</ParamType>
-      <ParamValue>992</ParamValue>
+      <ParamValue>91</ParamValue>
     </LaserProgParam>
     <LaserProgParam>
       <ProgRowNr>3</ProgRowNr>

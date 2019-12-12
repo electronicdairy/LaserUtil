@@ -124,12 +124,13 @@ def WriteLaser(LaserFile, LaserOut, Index, LaserDict, GlobalCall):
     result = LaserWrite(LaserFile, LaserOut, Index, LaserDict, GlobalCall)
     return result
 
+
 LaserDict = GenLaserDict(RobotFile, LaserFile)
-
-for key in LaserDict:
-    print(LaserDict[key].number)
-
 LaserDict = UpdateLaserDict(Index, LaserDict, GlobalCall)
 
 for key in LaserDict:
     print(LaserDict[key].number, LaserDict[key].oldnum, LaserDict[key].pfo, LaserDict[key].oldpfo)
+
+print(len(LaserDict))
+
+LaserWrite(LaserFile, LaserOut, LaserDict)

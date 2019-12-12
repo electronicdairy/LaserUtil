@@ -18,8 +18,7 @@ def UpdateLaserDict(Index, LaserDict, GlobalCall):
         oldnum = oldlaser[i]
         newnum = IndexData[(IndexData.Laser == oldnum)]["New Laser"].values[0]
         if oldnum in GlobalCall:
-            print(oldnum)
-            print("pass")
+            print("passed on " + str(oldnum))
         else:
             oldpfonums = LaserDict[oldnum].pfo
             newpfo = []
@@ -36,5 +35,5 @@ def main():
     UpdateLaserDict(Index, LaserDict, GlobalCall)
 
 
-if __name__ == "__main__":
+if __name__ == "__main__":`
     main()
