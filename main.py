@@ -4,6 +4,7 @@ from LaserParse import LaserParse
 from Procedural.replaceMULT import replaceMULT
 from PFOWrite import PFOWrite
 from LaserWrite import LaserWrite
+from UpdateLaserDict import UpdateLaserDict
 
 
 #   Inputs:
@@ -46,7 +47,6 @@ def GenRobotLaser(RobotFile):
 
 #   Generate laser dict from robot list:
 def GenLaserDict(RobotFile, LaserFile):
-    RobotList = GenRobotList(RobotFile)
     RobotLaserList = GenRobotLaser(RobotFile)
     LaserDict = LaserParse(RobotLaserList, LaserFile)
     return LaserDict
@@ -124,8 +124,12 @@ def WriteLaser(LaserFile, LaserOut, Index, LaserDict, GlobalCall):
     result = LaserWrite(LaserFile, LaserOut, Index, LaserDict, GlobalCall)
     return result
 
+LaserDict = GenLaserDict(RobotFile, LaserFile)
 
+for key in LaserDict:
+    print(LaserDict[key].number)
 
+LaserDict = UpdateLaserDict(Index, LaserDict, GlobalCall)
 
-
-
+for key in LaserDict:
+    print(LaserDict[key].number, LaserDict[key].oldnum, LaserDict[key].pfo, LaserDict[key].oldpfo)

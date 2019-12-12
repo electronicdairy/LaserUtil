@@ -3,10 +3,12 @@ from Procedural.replaceMULT import replaceMULT
 
 
 class ClassLaser:
-    def __init__(self, name, number, pfo, rotation):
+    def __init__(self, name, number, oldnum, pfo, oldpfo, rotation):
         self.name = name
         self.number = number
+        self.oldnum = oldnum
         self.pfo = pfo
+        self.oldpfo = oldpfo
         self.rotation = rotation
 
 
@@ -27,7 +29,7 @@ def LaserParse(RobotLaserList, LaserFile):
             rotationlist.append(target)
 
         z = RobotLaserList[i]
-        LaserDict[z] = ClassLaser(LaserName, LaserNum.text, pfolist, rotationlist)
+        LaserDict[z] = ClassLaser(LaserName, LaserNum.text, 0, pfolist, [], rotationlist)
 
     return LaserDict
 
