@@ -10,7 +10,7 @@ def PFOWrite(pfofile, pfoout, pfodict):
         tree = ET.ElementTree(file=str(pfofile) + str(oldnum) + ".xml")
         ProgNr = tree.find("Number")
         ProgNr.text = str(newnum)
-        print("Updated pfo #" + str(oldnum) + " to " + str(newnum))
+        print("Exported pfo #" + str(oldnum) + " to " + str(newnum))
 
         tree.write(str(pfoout) + str(newnum) + ".xml", encoding='UTF-8', xml_declaration=True)
 

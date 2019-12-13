@@ -8,40 +8,48 @@ from UpdateLaserDict import UpdateLaserDict
 from UpdatePFODict import UpdatePFODict
 
 #   Inputs:
-ProgramName = "D3_TEST3"
+# ProgramName = "TestCase1"
 RobotFile = 'Input/KA Dallas D3 Laser and Robot Backups/VRDD3Ethernet_Backup_20141129/RAPID/TASK1/PROGMOD/GM2698_A.mod'
 LaserFile = "Input/KA Dallas D3 Laser and Robot Backups/L3222M0248/L3222M0248/LaserProgram/L3222M0248_LaserProgram_"
-LaserOut = "Output/LaserFiles/"
+LaserOut = "Output/LaserFiles/LaserOut_TestCase1/"
 PFOFile = "Input/KA Dallas D3 Laser and Robot Backups/L3222M0248/L3222M0248/PfoProgram_1/L3222M0248_PfoProgram_1_"
-PFOOut = "Output/PFOFiles/Test1_"
+PFOOut = "Output/PFOFiles/PFOOut_TestCase1/"
 Index = "Input/Index/D3_TEST1.csv"
 GlobalCall = [140]
 
+# ProgramName = "TestCase2"
+# RobotFile = "Input/RobotProgram/BeforeDave/GMC_2017HD_A.mod"
+# LaserFile = "Input/LaserProgram/BeforeDave/L3222M0327_LaserProgram_"
+# LaserOut = "Output/LaserFiles/LaserOut_TestCase2/"
+# PFOFile = "Input/PFOProgram/BeforeDave/L3222M0327_PfoProgram_1_"
+# PFOOut = "Output/PFOFiles/PFOOut_TestCase2/"
+# Index = "Input/Index/TestCase2.csv"
+# GlobalCall = [1]
 
 #   Functions
-#   Generate robot list of Laser/PFO numbers from robot file
-def GenRobotList(RobotFile):
+#   Generate robot dict of Position/LineNr/Laser/PFO from robot file
+def GenRobotDict(RobotFile):
     RobotList = RobotParse(RobotFile)
     return RobotList
 
 
 #   Generate list of PFO Programs (int) from robot list:
 def GenRobotPFO(RobotFile):
-    RobotList = GenRobotList(RobotFile)
+    RobotDict = GenRobotDict(RobotFile)
     L1 = []
-    for i in range(len(RobotList)):
-        if RobotList[i][2] != 0:
-            L1.append(RobotList[i][2])
+    for key in RobotDict:
+        if RobotDict[key].pfonr != 0:
+            L1.append(RobotDict[key].pfonr)
     return L1
 
 
 #   Generate list of Laser Programs (int) from robot list:
 def GenRobotLaser(RobotFile):
-    RobotList = GenRobotList(RobotFile)
+    RobotDict = GenRobotDict(RobotFile)
     L1 = []
-    for i in range(len(RobotList)):
-        if RobotList[i][1] not in GlobalCall:
-            L1.append(RobotList[i][1])
+    for key in RobotDict:
+        if RobotDict[key].lasernr not in GlobalCall:
+            L1.append(RobotDict[key].lasernr)
     return L1
 
 
@@ -81,57 +89,40 @@ def GenPFODict(RobotFile, LaserFile, PFOFile):
 #   Input directories for robot, laser, and PFO
 #   Outputs csv with Robot Position, Laser Name & Num, PFO Name & Num
 def CreateOutputIndex(RobotFile, LaserFile, PFOFile):
-    RobotList = GenRobotList(RobotFile)
+    RobotDict = GenRobotDict(RobotFile)
     LaserDict = GenLaserDict(RobotFile, LaserFile)
     PFODict = GenPFODict(RobotFile, LaserFile, PFOFile)
 
-    def GenIndex(RobotList, LaserDict, PFODict):
+    def GenIndex(RobotDict, LaserDict, PFODict):
         L1 = []
 
-        for i in range(len(RobotList)):
-            Position = RobotList[i][0]
-            Laser = RobotList[i][1]
-            PFO = RobotList[i][2]
+        for key in RobotDict:
+            Position = RobotDict[key].position
+            RobotLineNr = RobotDict[key].robotlinenr
+            Laser = RobotDict[key].lasernr
+            PFO = RobotDict[key].pfonr
 
-            if RobotList[i][1] in GlobalCall:
-                L1.append([Position, Laser, "Global Call", 0, PFO, PFODict[PFO].name])
+            if Laser in GlobalCall:
+                L1.append([Position, RobotLineNr, Laser, "Global Call", 0, PFO, PFODict[PFO].name])
 
             else:
                 LaserName = LaserDict[Laser].name
                 LaserPFO = LaserDict[Laser].pfo
                 for j in range(len(LaserPFO)):
-                    L1.append([Position, Laser, LaserName, j + 1, LaserPFO[j], PFODict[LaserPFO[j]].name])
+                    L1.append([Position, RobotLineNr, Laser, LaserName, j + 1, LaserPFO[j], PFODict[LaserPFO[j]].name])
 
         with open("Output/OriginalIndex/" + str(ProgramName) + ".csv", "w") as OutputFile:
-            OutputFile.write("Position,Laser,Laser Name,Row,PFO,PFO Name,New Laser,New PFO" + "\n")
+            OutputFile.write("Position,RobotLineNr,Laser,Laser Name,Row,PFO, PFO Name,New Laser,New PFO" + "\n")
             for i in range(len(L1)):
                 string = replaceMULT(str(L1[i]), "[]'", "") + "\n"
                 OutputFile.write(string)
 
         print("Generated Index File")
 
-    GenIndex(RobotList, LaserDict, PFODict)
+    GenIndex(RobotDict, LaserDict, PFODict)
 
 
-#   Updates PFO file with new numbers
-def WritePFO(inputdir, outputdir, indexdir, pfodict):
-    result = PFOWrite(inputdir, outputdir, indexdir, pfodict)
-    return result
+LaserDict = GenLaserDict(RobotFile, LaserFile)
+LaserDict = UpdateLaserDict(Index, LaserDict, GlobalCall)
 
-
-PFODict = GenPFODict(RobotFile, LaserFile, PFOFile)
-
-UpdatedPFODict = UpdatePFODict(Index, PFODict)
-print(UpdatedPFODict)
-
-PFOWrite(PFOFile, PFOOut, UpdatedPFODict)
-
-# LaserDict = GenLaserDict(RobotFile, LaserFile)
-# LaserDict = UpdateLaserDict(Index, LaserDict, GlobalCall)
-#
-# for key in LaserDict:
-#     print(LaserDict[key].number, LaserDict[key].oldnum, LaserDict[key].pfo, LaserDict[key].oldpfo)
-#
-# print(len(LaserDict))
-#
-# LaserWrite(LaserFile, LaserOut, LaserDict)
+LaserWrite(LaserFile, LaserOut, LaserDict)

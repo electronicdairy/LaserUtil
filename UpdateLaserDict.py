@@ -4,12 +4,13 @@ from LaserParse import ClassLaser
 
 def UpdateLaserDict(Index, LaserDict, GlobalCall):
 
+    print("Begin Update Laser Dict")
     IndexData = pd.read_csv(Index)
     oldlaser = list(set(IndexData["Laser"]))
     newlaser = list(set(IndexData["New Laser"]))
 
     if len(oldlaser) == len(newlaser):
-        print("Laser list lengths match, proceeding to update")
+        print("Laser list lengths match, proceeding to update dictionary")
     else:
         print("Laser list lengths do not match. Verify index")
         return
@@ -24,10 +25,11 @@ def UpdateLaserDict(Index, LaserDict, GlobalCall):
             newpfo = []
             for j in range(len(oldpfonums)):
                 newpfo.append(IndexData[(IndexData.Laser == oldnum) & (IndexData.Row == j + 1)]["New PFO"].values[0])
-            LaserDict[newnum] = ClassLaser(LaserDict[oldnum].name, newnum, oldnum, LaserDict[oldnum].pfo, newpfo,
+            LaserDict[newnum] = ClassLaser(LaserDict[oldnum].name, newnum, oldnum, newpfo, LaserDict[oldnum].pfo,
                                            LaserDict[oldnum].rotation)
             del LaserDict[oldnum]
 
+    print("Update Laser Dict Complete")
     return LaserDict
 
 

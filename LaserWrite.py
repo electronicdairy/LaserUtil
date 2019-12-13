@@ -4,6 +4,7 @@ import xml.etree.ElementTree as ET
 def LaserWrite(LaserFile, LaserOut, LaserDict):
     for key in LaserDict:
 
+        print("Begin exporting laser files")
         newnum = LaserDict[key].number
         oldnum = LaserDict[key].oldnum
 
@@ -21,7 +22,7 @@ def LaserWrite(LaserFile, LaserOut, LaserDict):
             print("Laser File " + str(newnum) + ": Updated PFO # " + str(oldpfo[j]) + " to " + str(pfonums[j]))
 
         tree.write(str(LaserOut) + str(newnum) + ".xml", "UTF-8")
-
+    print("Completed Laser Write")
 
 def main():
     LaserWrite(LaserFile, LaserOut, Index, LaserDict, GlobalCall)
