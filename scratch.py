@@ -1,4 +1,5 @@
-with open("Input/RobotProgram/BeforeDave/Chevy_2017HD_A.mod", "r") as file:
-    filedata = file.read()
-    filedata = filedata.replace("rSetLaser_PFO_Prog_Num 2, 0;", "rSetLaser_PFO_Prog_Num 2111111, 0;")
-    print(filedata)
+import pandas as pd
+
+IndexData = pd.read_csv("Input/Index/D3_TEST1.csv")
+
+print(IndexData[(IndexData.PFO == 312)]["New PFO"].values[2])

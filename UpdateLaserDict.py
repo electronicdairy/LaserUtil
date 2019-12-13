@@ -35,5 +35,5 @@ def main():
     UpdateLaserDict(Index, LaserDict, GlobalCall)
 
 
-if __name__ == "__main__":`
+if __name__ == "__main__":
     main()

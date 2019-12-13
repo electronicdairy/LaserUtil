@@ -5,7 +5,7 @@ from Procedural.replaceMULT import replaceMULT
 from PFOWrite import PFOWrite
 from LaserWrite import LaserWrite
 from UpdateLaserDict import UpdateLaserDict
-
+from UpdatePFODict import UpdatePFODict
 
 #   Inputs:
 ProgramName = "D3_TEST3"
@@ -119,18 +119,17 @@ def WritePFO(inputdir, outputdir, indexdir, pfodict):
     return result
 
 
-#   Updates Laser files with new Laser Numbers and PFO numbers
-def WriteLaser(LaserFile, LaserOut, Index, LaserDict, GlobalCall):
-    result = LaserWrite(LaserFile, LaserOut, Index, LaserDict, GlobalCall)
-    return result
+PFODict = GenPFODict(RobotFile, LaserFile, PFOFile)
 
+UpdatedPFODict = UpdatePFODict(Index, PFODict)
+print(UpdatedPFODict)
 
-LaserDict = GenLaserDict(RobotFile, LaserFile)
-LaserDict = UpdateLaserDict(Index, LaserDict, GlobalCall)
-
-for key in LaserDict:
-    print(LaserDict[key].number, LaserDict[key].oldnum, LaserDict[key].pfo, LaserDict[key].oldpfo)
-
-print(len(LaserDict))
-
-LaserWrite(LaserFile, LaserOut, LaserDict)
+# LaserDict = GenLaserDict(RobotFile, LaserFile)
+# LaserDict = UpdateLaserDict(Index, LaserDict, GlobalCall)
+#
+# for key in LaserDict:
+#     print(LaserDict[key].number, LaserDict[key].oldnum, LaserDict[key].pfo, LaserDict[key].oldpfo)
+#
+# print(len(LaserDict))
+#
+# LaserWrite(LaserFile, LaserOut, LaserDict)

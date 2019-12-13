@@ -3,9 +3,10 @@ from Procedural.replaceMULT import replaceMULT
 
 
 class ClassPFO:
-    def __init__(self, name, number):
+    def __init__(self, name, number, oldnum):
         self.name = name
         self.number = number
+        self.oldnum = oldnum
 
 # with open("Input/Index/Chevy_2017HD_B") as Index:
 #     L0 = []
@@ -25,7 +26,7 @@ def PFOParse(pfolist, pfodir):
         Name = Name.lstrip()
         Num = tree.find("Number")
         y = pfolist[i]
-        PFOdict[y] = ClassPFO(Name, Num.text)
+        PFOdict[y] = ClassPFO(Name, Num.text, 0)
 
     return PFOdict
 
