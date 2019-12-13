@@ -124,6 +124,8 @@ PFODict = GenPFODict(RobotFile, LaserFile, PFOFile)
 UpdatedPFODict = UpdatePFODict(Index, PFODict)
 print(UpdatedPFODict)
 
+PFOWrite(PFOFile, PFOOut, UpdatedPFODict)
+
 # LaserDict = GenLaserDict(RobotFile, LaserFile)
 # LaserDict = UpdateLaserDict(Index, LaserDict, GlobalCall)
 #
