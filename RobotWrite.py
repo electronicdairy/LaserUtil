@@ -1,11 +1,18 @@
-def RobotWrite(RobotFile, RobotDict, LaserDict, PFODict):
+def RobotWrite(GlobalCall, RobotFile, RobotDict, LaserDict, PFODict):
 
     with open(RobotFile) as RobotFile:
         print("Begin Robot Write")
         file = RobotFile.readlines()
         for key in RobotDict:
             if RobotDict[key].type == "rSet":
+                if RobotDict[key].lasernr in GlobalCall:
+                    file[RobotDict[key].robotlinenr - 1] = \
+                        file[RobotDict[key].robotlinenr - 1].replace(RobotDict[key].pfo, RobotDict[]
+
+
                 target = file[(RobotDict[key].robotlinenr) - 1]
+                target = target.replace("Set", "peep")
+                file[(RobotDict[key].robotlinenr) - 1] = target
                 print("rset", target)
             elif RobotDict[key].type == "SetGo1":
                 target = file[(RobotDict[key].robotlinenr) - 1]
@@ -14,6 +21,8 @@ def RobotWrite(RobotFile, RobotDict, LaserDict, PFODict):
                 target = file[(RobotDict[key].robotlinenr) - 2]
                 print("SetGo2", target)
 
+    print(file)
+    print(target)
 
         # for i in range(len(file)):
         #     print("LINE NUMBER ==" + str(i))

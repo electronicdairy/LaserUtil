@@ -6,7 +6,7 @@ from PFOWrite import PFOWrite
 from LaserWrite import LaserWrite
 from UpdateLaserDict import UpdateLaserDict
 from UpdatePFODict import UpdatePFODict
-from RobotWrite import RobotWrite
+#from RobotWrite import RobotWrite
 
 
 #   Inputs:
@@ -31,8 +31,8 @@ GlobalCall = [140]
 #   Functions
 #   Generate robot dict of Position/LineNr/Laser/PFO from robot file
 def GenRobotDict(RobotFile):
-    RobotList = RobotParse(RobotFile)
-    return RobotList
+    RobotDict = RobotParse(RobotFile)
+    return RobotDict
 
 
 #   Generate list of PFO Programs (int) from robot list:
@@ -55,10 +55,9 @@ def GenRobotLaser(RobotFile):
     return L1
 
 
-#   Generate laser dict from robot list:
-def GenLaserDict(RobotFile, LaserFile):
-    RobotLaserList = GenRobotLaser(RobotFile)
-    LaserDict = LaserParse(RobotLaserList, LaserFile)
+#   Generate laser dict from robot dict:
+def GenLaserDict(RobotDict, LaserFile, GlobalCall):
+    LaserDict = LaserParse(RobotDict, LaserFile, GlobalCall)
     return LaserDict
 
 
@@ -125,9 +124,18 @@ def CreateOutputIndex(RobotFile, LaserFile, PFOFile):
 
 
 RobotDict = GenRobotDict(RobotFile)
-PFODict = GenPFODict(RobotFile, LaserFile, PFOFile)
-PFODict = UpdatePFODict(Index, PFODict)
-LaserDict = GenLaserDict(RobotFile, LaserFile)
-LaserDict = UpdateLaserDict(Index, LaserDict, GlobalCall)
+for key in RobotDict:
+    print(key)
+    print(RobotDict[key].position, RobotDict[key].type, RobotDict[key].robotlinenr, RobotDict[key].lasernr, RobotDict[key].pfonr)
 
-RobotWrite(RobotFile, RobotDict, LaserDict, PFODict)
+LaserDict = GenLaserDict(RobotFile, LaserFile, GlobalCall)
+# for key in LaserDict:
+#     x = LaserDict[key]
+#     print(x.position, x.name, x.number, x.oldnum, x.pfo, x.oldpfo, x.rotation)
+
+# PFODict = GenPFODict(RobotFile, LaserFile, PFOFile)
+# PFODict = UpdatePFODict(Index, PFODict)
+# LaserDict = GenLaserDict(RobotFile, LaserFile)
+# LaserDict = UpdateLaserDict(Index, LaserDict, GlobalCall)
+#
+# RobotWrite(GlobalCall, RobotFile, RobotDict, LaserDict, PFODict)

@@ -2,9 +2,9 @@ from Procedural.replaceMULT import replaceMULT
 
 
 class RobotProgram:
-    def __init__(self, type, position, robotlinenr, lasernr, pfonr):
-        self.type = type
+    def __init__(self, position, type, robotlinenr, lasernr, pfonr):
         self.position = position
+        self.type = type
         self.robotlinenr = robotlinenr
         self.lasernr = lasernr
         self.pfonr = pfonr
@@ -15,32 +15,32 @@ def RobotParse(RobotFile):
     RobotDict = {}
     with open(str(RobotFile), 'r') as robotProgram:
         lines = robotProgram.readlines()
-        j = 1
-        for i in range(len(lines)):
-            lines[i] = str(lines[i].lstrip())
-            if lines[i].startswith('rSetLaser_PFO_Prog_Num'):  # keyword query
+        position = 1
+        for linenum in range(len(lines)):
+            lines[linenum] = str(lines[linenum].lstrip())
+            if lines[linenum].startswith('rSetLaser_PFO_Prog_Num'):  # keyword query
                 sep = "_Num"
-                spl = lines[i].partition(sep)
+                spl = lines[linenum].partition(sep)
                 numLP = spl[2]
                 sep2 = numLP.split(",")
                 numL = int(sep2[0])
                 numP = int(replaceMULT(sep2[1],"Req,';\n'", ""))
-                RobotDict[i+1] = RobotProgram("rSet", j, i+1, numL, numP)
-                j += 1
+                RobotDict[position] = RobotProgram(position, "rSet", linenum, numL, numP)
+                position += 1
 
-            elif lines[i].startswith('SetGO LaserProgReq,'):     # keyword query
-                if lines[i-1].startswith('SetGO PFOProgReq,'):
-                    numL = lines[i][-8::]
+            elif lines[linenum].startswith('SetGO LaserProgReq,'):     # keyword query
+                if lines[linenum-1].startswith('SetGO PFOProgReq,'):
+                    numL = lines[linenum][-8::]
                     numL = int(replaceMULT(numL, "Req,'\n' ;", ""))
-                    numP = lines[i-1][-8::]
+                    numP = lines[linenum-1][-8::]
                     numP = int(replaceMULT(numP, "Req,'\n' ;", ""))
-                    RobotDict[i+1] = RobotProgram("SetGo2", j, i+1, numL, numP)
-                    j += 1
+                    RobotDict[position] = RobotProgram(position, "SetGo2", linenum, numL, numP)
+                    position += 1
                 else:
-                    numL = lines[i][-8::]
+                    numL = lines[linenum][-8::]
                     numL = int(replaceMULT(numL, "Req,'\n' ;", ""))
-                    RobotDict[i+1] = RobotProgram("SetGo1", j, i+1, numL, 0)
-                    j += 1
+                    RobotDict[position] = RobotProgram(position, "SetGo1", linenum, numL, 0)
+                    position += 1
 
     print("Robot Parse complete. RobotDict generated")
     return RobotDict
