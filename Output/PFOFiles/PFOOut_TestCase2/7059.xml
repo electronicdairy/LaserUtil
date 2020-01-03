@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<PfoCwPrg Version="3.0">
+  <Number>7059</Number><Name>GMC17A WD A35 NLP</Name>
+  <NoOfPoints>0</NoOfPoints>
+  <Transformation>
+    <ScaleX>1</ScaleX>
+    <ScaleY>1</ScaleY>
+    <TransX>0</TransX>
+    <TransY>0</TransY>
+    <Rotation>0</Rotation>
+  </Transformation>
+  <Optic unit="mm">450</Optic>
+  <Jumpspeed>4500</Jumpspeed>
+  <PFODelay>2</PFODelay>
+  <V_Offset>0</V_Offset>
+  <D3_active>0</D3_active>
+  <shadowwelding>0</shadowwelding>
+  <ProgType>VectorPower</ProgType>
+  <Date>
+    <year>2016</year>
+    <month>10</month>
+    <day>17</day>
+    <hour>16</hour>
+    <min>3</min>
+    <sec>9</sec>
+  </Date>
+  <g>
+    <circle PEnd="100" PEndVector="0" PStart="20" PWEnd="0" PWEndVector="0" PWStart="0" Ramp1Active="1" Ramp2Active="0" RampLen1="19" RampLen2="0" Z="0" count="0" cx="13.265" cy="-10.641" cz="0" deFocus="5" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" dir="0" firstpoint="0" majx="3" majy="0" majz="0" minx="0" miny="3" minz="0" phi1="323.4" phi2="60.4" phiOverlap="0" ptDistance="Infinity" r="3" reruns="1" v="105" viewascount="1" />
+    <line PEnd="100" PEndVector="100" PStart="100" PWEnd="0" PWEndVector="0" PWStart="0" Ramp1Active="0" Ramp2Active="0" RampLen1="0" RampLen2="0" Z="0" count="2" deFocus="5" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" firstpoint="0" ptDistance="28.99" reruns="1" v="105" viewascount="1" x1="14.746" x2="-10.459" y1="-8.033" y2="6.284" z1="0" z2="0" />
+    <circle PEnd="100" PEndVector="20" PStart="100" PWEnd="0" PWEndVector="0" PWStart="0" Ramp1Active="0" Ramp2Active="1" RampLen1="0" RampLen2="19" Z="0" count="0" cx="-11.941" cy="3.676" cz="0" deFocus="5" deFocusEnd="0" deFocusEndRampAct="0" deFocusEndRampLen="0" deFocusStart="0" deFocusStartRampAct="0" deFocusStartRampLen="0" dir="0" firstpoint="0" majx="3" majy="0" majz="0" minx="0" miny="3" minz="0" phi1="60.4" phi2="143.4" phiOverlap="0" ptDistance="Infinity" r="3" reruns="1" v="105" viewascount="1" />
+  </g>
+</PfoCwPrg>

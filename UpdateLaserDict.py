@@ -10,8 +10,10 @@ def UpdateLaserDict(Index, LaserDict, GlobalCall):
     newlaser = list(set(IndexData["New Laser"]))
 
     if len(oldlaser) == len(newlaser):
-        print("Laser list lengths match, proceeding to update dictionary")
+        print("Laser list lengths match, proceeding to update laser dictionary")
     else:
+        print(oldlaser)
+        print(newlaser)
         print("Laser list lengths do not match. Verify index")
         return
 
@@ -19,7 +21,7 @@ def UpdateLaserDict(Index, LaserDict, GlobalCall):
         oldnum = oldlaser[i]
         newnum = IndexData[(IndexData.Laser == oldnum)]["New Laser"].values[0]
         if oldnum in GlobalCall:
-            print("passed on " + str(oldnum))
+            print("Passed on Global Call: " + str(oldnum))
         else:
             oldpfonums = LaserDict[oldnum].pfo
             newpfo = []
