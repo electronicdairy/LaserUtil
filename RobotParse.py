@@ -11,6 +11,7 @@ class RobotProgram:
 
 
 def RobotParse(RobotFile):
+    print("Begin robot parse")
     RobotDict = {}
     with open(str(RobotFile), 'r') as robotProgram:
         lines = robotProgram.readlines()
@@ -41,6 +42,7 @@ def RobotParse(RobotFile):
                     RobotDict[i+1] = RobotProgram("SetGo1", j, i+1, numL, 0)
                     j += 1
 
+    print("Robot Parse complete. RobotDict generated")
     return RobotDict
 
 

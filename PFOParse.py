@@ -8,16 +8,9 @@ class ClassPFO:
         self.number = number
         self.oldnum = oldnum
 
-# with open("Input/Index/Chevy_2017HD_B") as Index:
-#     L0 = []
-#     for line in Index:
-#         L0.append(line.split())
-#
-#     for i in range(len(L0)):
-#         L0[i] = int(replaceMULT(L0[i][3], "'", ""))
-
 
 def PFOParse(pfolist, pfodir):
+    print("Begin PFO Parse")
     PFOdict = {}
     for i in range(len(pfolist)):
         tree = ET.ElementTree(file= str(pfodir) + str(pfolist[i]) + ".xml")
@@ -28,6 +21,7 @@ def PFOParse(pfolist, pfodir):
         y = pfolist[i]
         PFOdict[y] = ClassPFO(Name, Num.text, 0)
 
+    print("PFO parse complete")
     return PFOdict
 
 

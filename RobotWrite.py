@@ -4,8 +4,17 @@ def RobotWrite(RobotFile, RobotDict, LaserDict, PFODict):
         print("Begin Robot Write")
         file = RobotFile.readlines()
         for key in RobotDict:
-            target = file[(RobotDict[key].robotlinenr) - 1]
-            print(target)
+            if RobotDict[key].type == "rSet":
+                target = file[(RobotDict[key].robotlinenr) - 1]
+                print("rset", target)
+            elif RobotDict[key].type == "SetGo1":
+                target = file[(RobotDict[key].robotlinenr) - 1]
+                print("SetGo1", target)
+            elif RobotDict[key].type == "SetGo2":
+                target = file[(RobotDict[key].robotlinenr) - 2]
+                print("SetGo2", target)
+
+
         # for i in range(len(file)):
         #     print("LINE NUMBER ==" + str(i))
         #     print(file[i])

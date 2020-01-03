@@ -2,7 +2,7 @@ import pandas as pd
 from PFOParse import ClassPFO
 
 def UpdatePFODict(Index, PFODict):
-
+    print("Being UpdatePFODict")
     IndexData = pd.read_csv(Index)
     oldnum = list(set(IndexData["PFO"]))
 
@@ -16,6 +16,7 @@ def UpdatePFODict(Index, PFODict):
         else:
             print("passed on PFO dict entry # " + str(oldnum[i]) + ": no new PFO num")
 
+    print("PFODict Updated")
     return PFODict
 
 
