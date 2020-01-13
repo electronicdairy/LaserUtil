@@ -1,5 +1,5 @@
 from Procedural.replaceMULT import replaceMULT
-
+# TODO: add print statements to show count of global call and positions for logging purposes
 
 class RobotProgram:
     def __init__(self, position, type, robotlinenr, lasernr, pfonr):

@@ -124,14 +124,10 @@ def CreateOutputIndex(RobotFile, LaserFile, PFOFile):
 
 
 RobotDict = GenRobotDict(RobotFile)
-for key in RobotDict:
-    print(key)
-#   print(RobotDict[key].position, RobotDict[key].type, RobotDict[key].robotlinenr, RobotDict[key].lasernr, RobotDict[key].pfonr)
-
 LaserDict = GenLaserDict(RobotDict, LaserFile, GlobalCall)
-# for key in LaserDict:
-#     x = LaserDict[key]
-#     print(x.position, x.name, x.number, x.oldnum, x.pfo, x.oldpfo, x.rotation)
+for key in LaserDict:
+    x = LaserDict[key]
+    print(x.position, x.name, x.number, x.oldnum, x.pfo, x.oldpfo, x.rotation)
 
 # PFODict = GenPFODict(RobotFile, LaserFile, PFOFile)
 # PFODict = UpdatePFODict(Index, PFODict)

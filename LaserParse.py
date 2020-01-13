@@ -17,24 +17,24 @@ def LaserParse(RobotDict, LaserFile, GlobalCall):
 
     LaserDict = {}
     for key in RobotDict:
-        print(key)
-    #     if RobotDict[key].lasernr not in GlobalCall:
-    #         pfolist = []
-    #         rotationlist = []
-    #         tree = ET.ElementTree(file =str(LaserFile) + str(RobotDict[key].lasernr) + ".xml")
-    #         LaserName = tree.find("ProgName")
-    #         LaserName = replaceMULT(LaserName.text, ", ", "-")
-    #         LaserNum = tree.find("ProgNr")
-    #         for y in tree.findall("./LaserProgParams/LaserProgParam[ParamName = 'PFOProgNo']/ParamValue"):
-    #             target = int(replaceMULT(y.text, "' ", ""))
-    #             pfolist.append(target)
-    #         for y in tree.findall("./LaserProgParams/LaserProgParam[ParamName = 'PFORotation']/ParamValue"):
-    #             target = int(replaceMULT(y.text, "' ", ""))
-    #             rotationlist.append(target)
-    #
-    #         LaserDict[key] = ClassLaser(key, LaserName, LaserNum.text, 0, pfolist, [], rotationlist)
-    #
-    # return LaserDict
+        if RobotDict[key].lasernr not in GlobalCall:
+            pfolist = []
+            rotationlist = []
+            position = RobotDict[key].position
+            tree = ET.ElementTree(file =str(LaserFile) + str(RobotDict[key].lasernr) + ".xml")
+            LaserName = tree.find("ProgName")
+            LaserName = replaceMULT(LaserName.text, ", ", "-")
+            LaserNum = tree.find("ProgNr")
+            for y in tree.findall("./LaserProgParams/LaserProgParam[ParamName = 'PFOProgNo']/ParamValue"):
+                target = int(replaceMULT(y.text, "' ", ""))
+                pfolist.append(target)
+            for y in tree.findall("./LaserProgParams/LaserProgParam[ParamName = 'PFORotation']/ParamValue"):
+                target = int(replaceMULT(y.text, "' ", ""))
+                rotationlist.append(target)
+
+            LaserDict[key] = ClassLaser(key, position, LaserName, LaserNum.text, pfolist, [], rotationlist)
+
+    return LaserDict
 
 
 def main():
