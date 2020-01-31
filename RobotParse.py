@@ -39,23 +39,16 @@ def RobotParse(RobotFile):
                     RobotDict[position] = RobotProgram(position, "SetGo1", linenum, numL, 0)
                     position += 1
 
-    # for key in RobotDict:
-    #     unique = []
-    #     repeat = []
-    #     if not unique:
-    #         unique.append(RobotDict[key].lasernr)
-    #     elif RobotDict[key].lasernr in unique:
-    #         repeat.append(RobotDict[key].lasernr)
-    #     else:
-    #         unique.append(RobotDict[key].lasernr)
-    #
-    # GC = set(repeat)
-    # x = len(unique - 1)
-    # y = len(repeat + 1)
-    #
-
+    unique = []
+    repeat = []
+    for key in RobotDict:
+        if RobotDict[key].lasernr not in unique:
+            unique.append(RobotDict[key].lasernr)
+        else:
+            repeat.append(RobotDict[key].lasernr)
 
     print("Robot Parse complete. RobotDict generated")
+    print("Global Call Detected as:", set(repeat))
     return RobotDict
 
 
