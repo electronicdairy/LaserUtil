@@ -10,23 +10,23 @@ from UpdatePFODict import UpdatePFODict
 
 
 #   Inputs:
-ProgramName = "TestCase1"
-RobotFile = 'Input/KA Dallas D3 Laser and Robot Backups/VRDD3Ethernet_Backup_20141129/RAPID/TASK1/PROGMOD/GM2698_A.mod'
-LaserFile = "Input/KA Dallas D3 Laser and Robot Backups/L3222M0248/L3222M0248/LaserProgram/L3222M0248_LaserProgram_"
-LaserOut = "Output/LaserFiles/LaserOut_TestCase1/"
-PFOFile = "Input/KA Dallas D3 Laser and Robot Backups/L3222M0248/L3222M0248/PfoProgram_1/L3222M0248_PfoProgram_1_"
-PFOOut = "Output/PFOFiles/PFOOut_TestCase1/"
-Index = "Input/Index/D3_TEST1.csv"
-GlobalCall = [140]
+# ProgramName = "TestCase1"
+# RobotFile = 'Input/KA Dallas D3 Laser and Robot Backups/VRDD3Ethernet_Backup_20141129/RAPID/TASK1/PROGMOD/GM2698_A.mod'
+# LaserFile = "Input/KA Dallas D3 Laser and Robot Backups/L3222M0248/L3222M0248/LaserProgram/L3222M0248_LaserProgram_"
+# LaserOut = "Output/LaserFiles/LaserOut_TestCase1/"
+# PFOFile = "Input/KA Dallas D3 Laser and Robot Backups/L3222M0248/L3222M0248/PfoProgram_1/L3222M0248_PfoProgram_1_"
+# PFOOut = "Output/PFOFiles/PFOOut_TestCase1/"
+# Index = "Input/Index/D3_TEST1.csv"
+# GlobalCall = [140]
 
-# ProgramName = "TestCase2"
-# RobotFile = "Input/RobotProgram/BeforeDave/GMC_2017HD_A.mod"
-# LaserFile = "Input/LaserProgram/BeforeDave/L3222M0327_LaserProgram_"
-# LaserOut = "Output/LaserFiles/LaserOut_TestCase2/"
-# PFOFile = "Input/PFOProgram/BeforeDave/L3222M0327_PfoProgram_1_"
-# PFOOut = "Output/PFOFiles/PFOOut_TestCase2/"
-# Index = "Input/Index/TestCase2.csv"
-# GlobalCall = [1]
+ProgramName = "TestCase2"
+RobotFile = "Input/RobotProgram/BeforeDave/GMC_2017HD_A.mod"
+LaserFile = "Input/LaserProgram/BeforeDave/L3222M0327_LaserProgram_"
+LaserOut = "Output/LaserFiles/LaserOut_TestCase2/"
+PFOFile = "Input/PFOProgram/BeforeDave/L3222M0327_PfoProgram_1_"
+PFOOut = "Output/PFOFiles/PFOOut_TestCase2/"
+Index = "Input/Index/TestCase2.csv"
+GlobalCall = [1]
 
 
 #   Input directories for robot, laser, and PFO
@@ -60,12 +60,18 @@ def CreateOutputIndex(RobotFile, LaserFile, PFOFile):
                 string = replaceMULT(str(L1[i]), "[]'", "") + "\n"
                 OutputFile.write(string)
 
-        print("Generated Index File")
+        print("Generated Index File for " + ProgramName)
 
     GenIndex(RobotDict, LaserDict, PFODict)
 
+# RobotDict = RobotParse(RobotFile)
+# LaserDict = LaserParse(RobotDict, LaserFile, GlobalCall)
+# PFODict = PFOParse(RobotDict, LaserDict, PFOFile)
 
 CreateOutputIndex(RobotFile, LaserFile, PFOFile)
+
+
+# CreateOutputIndex(RobotFile, LaserFile, PFOFile)
 
 # PFODict = GenPFODict(RobotFile, LaserFile, PFOFile)
 # PFODict = UpdatePFODict(Index, PFODict)

@@ -12,6 +12,8 @@ class ClassPFO:
 def PFOParse(RobotDict, LaserDict, PFOFile):
     print("Begin PFO Parse")
     PFODict = {}
+    k = 0
+    j = 0
 
     for key in RobotDict:
         x = RobotDict[key]
@@ -23,6 +25,7 @@ def PFOParse(RobotDict, LaserDict, PFOFile):
             Num = tree.find("Number")
             y = x.pfonr
             PFODict[y] = ClassPFO(Name, Num.text, 0)
+            k += 1
 
     for key in LaserDict:
         x = LaserDict[key].pfo
@@ -34,8 +37,10 @@ def PFOParse(RobotDict, LaserDict, PFOFile):
             Num = tree.find("Number")
             y = x[i]
             PFODict[y] = ClassPFO(Name, Num.text, 0)
+            j += 1
 
-    print("PFO parse complete")
+    print("PFO parse complete, found ", k, " PFOs from ", k, " Global Calls and ", j, " PFOs from ", len(LaserDict),
+          " Laser Files")
     return PFODict
 
 
