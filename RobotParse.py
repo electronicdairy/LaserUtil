@@ -19,12 +19,9 @@ def RobotParse(RobotFile):
         for linenum in range(len(lines)):
             lines[linenum] = str(lines[linenum].lstrip())
             if lines[linenum].startswith('rSetLaser_PFO_Prog_Num'):  # keyword query
-                sep = "_Num"
-                spl = lines[linenum].partition(sep)
-                numLP = spl[2]
-                sep2 = numLP.split(",")
-                numL = int(sep2[0])
-                numP = int(replaceMULT(sep2[1],"Req,';\n'", ""))
+                sep = lines[linenum].partition(",")
+                numL = int(sep[0][-2::].lstrip())
+                numP = int(replaceMULT(sep[2][-6::]," ';\n'",""))
                 RobotDict[position] = RobotProgram(position, "rSet", linenum, numL, numP)
                 position += 1
 
@@ -41,6 +38,22 @@ def RobotParse(RobotFile):
                     numL = int(replaceMULT(numL, "Req,'\n' ;", ""))
                     RobotDict[position] = RobotProgram(position, "SetGo1", linenum, numL, 0)
                     position += 1
+
+    # for key in RobotDict:
+    #     unique = []
+    #     repeat = []
+    #     if not unique:
+    #         unique.append(RobotDict[key].lasernr)
+    #     elif RobotDict[key].lasernr in unique:
+    #         repeat.append(RobotDict[key].lasernr)
+    #     else:
+    #         unique.append(RobotDict[key].lasernr)
+    #
+    # GC = set(repeat)
+    # x = len(unique - 1)
+    # y = len(repeat + 1)
+    #
+
 
     print("Robot Parse complete. RobotDict generated")
     return RobotDict

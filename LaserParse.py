@@ -14,10 +14,14 @@ class ClassLaser:
 
 
 def LaserParse(RobotDict, LaserFile, GlobalCall):
-
+    print("Begin Laser Parse")
     LaserDict = {}
+    i = 0
+    j = 0
     for key in RobotDict:
-        if RobotDict[key].lasernr not in GlobalCall:
+        if RobotDict[key].lasernr in GlobalCall:
+            i += 1
+        elif RobotDict[key].lasernr not in GlobalCall:
             pfolist = []
             rotationlist = []
             position = RobotDict[key].position
@@ -33,7 +37,9 @@ def LaserParse(RobotDict, LaserFile, GlobalCall):
                 rotationlist.append(target)
 
             LaserDict[key] = ClassLaser(key, position, LaserName, LaserNum.text, pfolist, [], rotationlist)
+            j += 1
 
+    print("Laser Parse completed. Discovered " + str(i) + " Global Calls and " + str(j) + " Laser Files")
     return LaserDict
 
 
