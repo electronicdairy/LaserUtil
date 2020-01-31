@@ -9,20 +9,34 @@ class ClassPFO:
         self.oldnum = oldnum
 
 
-def PFOParse(pfolist, pfodir):
+def PFOParse(RobotDict, LaserDict, PFOFile):
     print("Begin PFO Parse")
-    PFOdict = {}
-    for i in range(len(pfolist)):
-        tree = ET.ElementTree(file= str(pfodir) + str(pfolist[i]) + ".xml")
-        Name = tree.find("Name")
-        Name = replaceMULT(Name.text, ",", "-")
-        Name = Name.lstrip()
-        Num = tree.find("Number")
-        y = pfolist[i]
-        PFOdict[y] = ClassPFO(Name, Num.text, 0)
+    PFODict = {}
+
+    for key in RobotDict:
+        x = RobotDict[key]
+        if x.pfonr != 0:
+            tree = ET.ElementTree(file= str(PFOFile) + str(x.pfonr) + ".xml")
+            Name = tree.find("Name")
+            Name = replaceMULT(Name.text, ",", "-")
+            Name = Name.lstrip()
+            Num = tree.find("Number")
+            y = x.pfonr
+            PFODict[y] = ClassPFO(Name, Num.text, 0)
+
+    for key in LaserDict:
+        x = LaserDict[key].pfo
+        for i in range(len(x)):
+            tree = ET.ElementTree(file=str(PFOFile) + str(x[i]) + ".xml")
+            Name = tree.find("Name")
+            Name = replaceMULT(Name.text, ",", "-")
+            Name = Name.lstrip()
+            Num = tree.find("Number")
+            y = x[i]
+            PFODict[y] = ClassPFO(Name, Num.text, 0)
 
     print("PFO parse complete")
-    return PFOdict
+    return PFODict
 
 
 # x = PFOParse(L0)
@@ -32,7 +46,7 @@ def PFOParse(pfolist, pfodir):
 # print(x[127].number)
 
 def main():
-    PFOParse(pfolist, pfodir)
+    PFOParse(RobotDict, LaserDict, PFOFile)
 
 
 if __name__ == "__main__":

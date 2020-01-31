@@ -36,7 +36,7 @@ def LaserParse(RobotDict, LaserFile, GlobalCall):
                 target = int(replaceMULT(y.text, "' ", ""))
                 rotationlist.append(target)
 
-            LaserDict[key] = ClassLaser(key, position, LaserName, LaserNum.text, pfolist, [], rotationlist)
+            LaserDict[key] = ClassLaser(position, LaserName, LaserNum.text, None, pfolist, [], rotationlist)
             j += 1
 
     print("Laser Parse completed. Discovered " + str(i) + " Global Calls and " + str(j) + " Laser Files")
